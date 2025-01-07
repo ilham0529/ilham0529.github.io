@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tembak Gebetan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffebf0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            color: #ff4081;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .yes {
+            background-color: #4caf50;
+            color: white;
+        }
+
+        .no {
+            background-color: #f44336;
+            color: white;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Mau jadi pacar aku?</h1>
+        <div class="buttons">
+            <button class="yes" onclick="yesClick()">Ya</button>
+            <button class="no" onmouseover="moveButton(this)">Tidak</button>
+        </div>
+    </div>
+
+    <script>
+        function yesClick() {
+            alert("Aku juga suka kamu! ❤");
+        }
+
+        function moveButton(button) {
+            const x = Math.random() * (window.innerWidth - button.offsetWidth);
+            const y = Math.random() * (window.innerHeight - button.offsetHeight);
+            button.style.left = x + 'px';
+            button.style.top = y + 'px';
+        }
+    </script>
+</body>
+</html>
